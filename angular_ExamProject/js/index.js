@@ -1,0 +1,32 @@
+//jQuery
+$(function(){
+    $(".baseUI>li>ul").slideUp();
+    $(".baseUI>li").off("click");
+    $(".baseUI>li").on("click",function(){
+        if($(this).children("ul").css("display")=="none"){
+            $(".baseUI>li>ul").slideUp();
+            $(this).children("ul").stop().slideDown(800);
+        }
+    })
+    //模拟点击
+    $(".baseUI>li>ul:eq(0)").slideDown(800);
+    //操作current类
+    $(".baseUI>li>ul").on("click","li",function(){
+        $(".baseUI li").removeClass("current");
+        $(this).addClass("current");
+    })
+    $(document).ready(function(){
+        $(".baseUI>li>ul>li:eq(0)").trigger("click");
+    })
+})
+//angular
+var app=angular.module("myApp",["ngRoute","app.allSub","app.addSub"]);
+//config
+app.config(function($routeProvider){
+    $routeProvider.when("/allSubject/a/:a/b/:b/c/:c/d/:d",{
+        templateUrl:"tpl/allSubject.html",
+        controller:"allSubControl"
+    }).when("/testMargin",{
+        templateUrl:"tpl/testMargin.html",
+    })
+})

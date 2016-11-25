@@ -1,0 +1,19 @@
+该项目使用的是angularjs进行页面的dom操作及数据读取，在没有部署在服务器的情况下，可能部分功能无法实现。
+
+基本架构：
+      html+angular路由(浏览器地址的变化，并且能拿到里面的参数)
+        ?:$route.param
+        路径参数  /sub/a/0 ?$routeParams
+
+        过滤器：
+          系统的
+          自定义的
+        服务：
+          就是一个对象，有属性和方法
+          系统的
+          自定义的：factory  service  provider
+        指令：
+          系统指令
+          自定义指令：
+             1.导入模板，可以用路由代替
+             2.绑定事件(用link指令找到element和scope来绑事件:function)

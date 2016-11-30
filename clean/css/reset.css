@@ -1,0 +1,17 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+ul{
+	list-style: none;
+}
+body{
+	background-color: #fafafa;
+}
+img{
+	display: block;
+}

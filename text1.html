@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #userlist .contextmenu li.enabled a{ color: gray }
+        div#userlist ul.contextmenu li span a{ color: black;position:  }
+    </style>
+    <script>
+        var User = {
+            count: 1,
+            getCount: function(){
+                return this.count;
+            }
+        };
+        console.log(User.getCount());
+        var func = User.getCount;
+        console.log(func());
+    </script>
+</head>
+<body>
+<div id="userlist">
+    <ul class="contextmenu">
+        <li class="enabled">
+            <span>
+                <a href="#">颜色</a>
+            </span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
